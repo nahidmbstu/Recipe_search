@@ -131,6 +131,24 @@
 
 
             <div class="row">
+
+
+
+
+    <script>
+
+
+        $( document ).ready(function() {
+
+           
+
+    console.log("dssdsdsdsdsdsd");
+
+  
+
+});
+
+</script>
                   <script type="text/javascript">
         
            
@@ -176,7 +194,7 @@
   tableHtml += "<tr>";
   tableHtml += "<td>" + data.hits[i].recipe.label +"</td>" ;
   tableHtml += "<td><img src= "+ data.hits[i].recipe.image +"></td>";
-  tableHtml += "<td>" + data.hits[i].recipe.url + "</td>";
+  tableHtml += "<td>  <a href="+ data.hits[i].recipe.url + ">Detalis</a></td>";
   tableHtml += "<td>" + "<button id= "+"favorite"+">add to favorite</button>" + "</td>";
   tableHtml += "<tr>";
 
@@ -187,7 +205,7 @@
                     document.getElementById("table").innerHTML = tableHtml;
 
 
-                    console.log(tableHtml);
+                
 
 
 
@@ -214,6 +232,9 @@
        <table>
 
        <div>
+
+
+         
 
 
 
