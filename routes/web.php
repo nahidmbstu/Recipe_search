@@ -11,8 +11,18 @@
 |
 */
 
+
+
+
+
 Route::get('/', "apicontroller@start" )->middleware("auth");
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index2')->name('home');
+Route::get('/home', 'HomeController@index2');
+
+Route::get('ajaxRequest', 'HomeController@ajaxRequest');
+Route::post('/search', 'HomeController@ajaxRequestPost');
+
+
+
