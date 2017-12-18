@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+use App\Favorite;
+
 class HomeController extends Controller
 {
     /**
@@ -31,7 +33,11 @@ class HomeController extends Controller
 
     public function index2()
     {
-        return view('home');
+
+
+        $Favorite = Favorite::all();
+
+        return view('home')->with('status', $Favorite );
     }
 
     
@@ -61,12 +67,26 @@ class HomeController extends Controller
 
 
         public function add(Request $request,  $name)
+
+
     {
-         $user = Auth::user()->name;
-         $id = Auth::id();
-         echo $name."<br/>".$user ."<br/>".$id;
+          
+          $user = Auth::user()->name;
+
+          $id = Auth::id();
+
+          $Favorite = new Favorite;
+
+          $Favorite->username = $user;
+
+          $Favorite->item_name = $request->name ;
+    
+          $Favorite->save();
+
+          return redirect('/home')->with('status', 'items added!');
+
+         // echo $name."<br/>".$user ."<br/>".$id;
 
     }
-
 
 }

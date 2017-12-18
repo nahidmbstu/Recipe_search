@@ -142,7 +142,15 @@ tableHtml += "<td><a href= " + data.hits[i].recipe.url + ">details</a></td>";
 
             $("#table").html(tableHtml);
 
-           }
+           },
+
+           error : function(error){
+
+            console.log(error)
+
+        }
+
+
         });
 
     });
