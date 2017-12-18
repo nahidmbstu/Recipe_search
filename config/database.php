@@ -61,7 +61,7 @@ return [
             'port' => '5432',
             'database' => 'db646oe2dn4jvp',
             'username' => 'bbrgqdccrqidjf',
-            'password' => '2d638d0f0f4ce46b4bf7c274638077692e17ed613aea695776d8ef90e6891d66',
+    'password' => '2d638d0f0f4ce46b4bf7c274638077692e17ed613aea695776d8ef90e6891d66',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
