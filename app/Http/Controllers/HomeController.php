@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -51,10 +53,18 @@ class HomeController extends Controller
         $data = file_get_contents($url);
 
         $json = json_decode($data);
-      
-        $data =  response()->json(['success'=> $json ]);
 
-        return view("home")->with(["array" => $data ]);
+      
+        return response()->json(['success'=> $json ]);
+
+    }
+
+
+        public function add(Request $request,  $name)
+    {
+         $user = Auth::user()->name;
+         $id = Auth::id();
+         echo $name."<br/>".$user ."<br/>".$id;
 
     }
 

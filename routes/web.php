@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index2');
 
+
+Route::get('/add/{name}', 'HomeController@add');
+
 Route::get('ajaxRequest', 'HomeController@ajaxRequest');
 Route::post('/search', 'HomeController@ajaxRequestPost');
 
