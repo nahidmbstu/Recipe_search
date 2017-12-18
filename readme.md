@@ -13,6 +13,6 @@
 
 <p>show the list</p>
 
-<img src="https://github.com/nahidmbstu/Recipe_search/blob/master/public/2.PNG" >
+<img src="https://github.com/nahidmbstu/Recipe_search/blob/master/public/3.PNG" >
 
 
